@@ -18,18 +18,8 @@ class MainActivity : AppCompatActivity() {
         uxFeedbackSdk?.applySettings(UxSdkSettings(true))
         uxFeedbackSdk?.applyStyle(R.style.UxFeedbackLightTheme)
         button.setOnClickListener {
-            uxFeedbackSdk?.startCampaign(this@MainActivity, "event5")
+            uxFeedbackSdk?.startCampaign("event5")
         }
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        uxFeedbackSdk?.saveState()
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        uxFeedbackSdk?.restoreState(this)
     }
 
 }
