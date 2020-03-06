@@ -1,6 +1,7 @@
 package ru.uxfeedback.uxdemoapplication
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             uxFeedbackSdk?.startCampaign("event5")
         }
+        button_go_next.setOnClickListener {
+            startActivity(Intent(this, StubActivity::class.java))
+        }
     }
-
 }
