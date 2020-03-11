@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        uxFeedbackSdk?.applySettings(UxSdkSettings(true))
+        uxFeedbackSdk?.applySettings(UxSdkSettings(false))
         uxFeedbackSdk?.applyStyle(R.style.UxFeedbackLightTheme)
         button.setOnClickListener {
             uxFeedbackSdk?.startCampaign("event5")
